@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .medicine-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .medicine {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+        .medicine img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .medicine h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #555;
+        }
+        .medicine p {
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Medicines</h1>
+    <div class="medicine-container">
+        <div class="medicine">
+            <img src="https://cdn01.pharmeasy.in/dam/products_otc/H45820/crocin-650-tablet-15-nos-3-1689759566.jpg?dim=700x0&dpr=1&q=100" alt="Crocin 650">
+            <h2>Crocin 650</h2>
+            <p>Reduces fever and treats mild to moderate pain.</p>
+            <a href="https://pharmeasy.in/health-care/products/crocin-650-tablet-15-no-s-3626228">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/369247058/BS/ZD/LQ/101727781/dolo-650-paracetamol-tablets-500x500.jpeg" alt="Dolo 650">
+            <h2>Dolo 650</h2>
+            <p>Used to treat headaches, migraines, menstrual pains, etc.</p>
+            <a href="https://www.indiamart.com/proddetail/dolo-650-paracetamol-tablets-2852680896412.html?mTd=1">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://cdn01.pharmeasy.in/dam/products_otc/R47602/saridon-advance-tablet-for-5-in-1-pain-relief-2-1681980929.jpg?dim=700x0&dpr=1&q=100" alt="saridon">
+            <h2>saridon</h2>
+            <p>commonly used for headaches,commoncold.</p>
+            <a href="https://pharmeasy.in/health-care/products/saridon-advance-strip-of-10-tablets-3046468">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://cdn01.pharmeasy.in/dam/products/267780/clonafit-plus-strip-of-10-tablets-3-1651304020.jpg?dim=320x320&dpr=1&q=100" alt="clonofit 0.5mg">
+            <h2>colofit 0.5mg</h2>
+            <p>Used to treat anxiety,fits.</p>
+            <a href="https://www.apollopharmacy.in/hi/medicine/clonafit-md-0-5mg-tablet">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://www.pharmavends.com/userspics/f3888d4ae8630c3ce1d2be987d7d9e59.png" alt="prolol TR-40mg">
+            <h2>prolol TR-40mg</h2>
+            <p>to treat high blood pressure,heart related chest pain.</p>
+            <a href="https://www.netmeds.com/prescriptions/prolol-tr-40mg-capsule-10-s">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://images.apollo247.in/pub/media/catalog/product/S/A/SAR0011_1_1.jpg?tr=q-80,f-webp,w-100,dpr-2,c-at_max" alt="sartel 40mg">
+            <h2>sartel 40mg</h2>
+            <p>used for heart related conditions such as stroke,heart attack.</p>
+            <a href="https://www.apollopharmacy.in/medicine/sartel-40mg-tablet">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://images.apollo247.in/pub/media/catalog/product/Z/I/ZIN0036_1_1.jpg?tr=q-80,f-webp,w-100,dpr-2,c-at_max" alt="zincovit">
+            <h2>zincovit</h2>
+            <p>immune deficiency disorders,zinc deficiency.</p>
+            <a href="https://www.apollopharmacy.in/otc/zincovit-tablet?utm_source=google&utm_medium=pmax&campaignid=21100407117&adgroupid=&keyword=&device=c&adtype=pla&product_id=ZIN0036&utm_campaign=Pmax_Pharma_PLProducts_Topcities_TCPA&utm_content=[adgroup]&gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG-4qlofbwVJ2DLuSddcGv97Bt-9zd9W_s_A7xOf6DcQTpgtng731wRoCSPQQAvD_BwE">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/xmuqqunbzgz9c4b4kurb.jpg" alt="HB gain">
+            <h2>HB gain</h2>
+            <p>it is the best medicine to increase the blood in body,it carries oxygen throughout the body.</p>
+            <a href="https://www.1mg.com/otc/hb-gain-tablet-otc344325?wpsrc=Google+Organic+Search">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://www.krishlarpharma.com/wp-content/uploads/2019/12/KRITDEC-SP-tablet.jpg" alt="Diclofenac ">
+            <h2>Diclofenac</h2>
+            <p>used to treat mild to moderate pain,joint pain.</p>
+            <a href="https://drbest.in/product/diclofenac-sodium-and-paracetamol-tablets/">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://gelusil.com/includes/images/img_box_shot@2x.jpg" alt="gelusil">
+            <h2>gelusil</h2>
+            <p>indicated for relief of symptoms of hyperacidity,eg:(heartburn,epigastric discomfort).</p>
+            <a href="https://gelusil.com/about-gelusil/">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/tgydhbex82molbz3xxwn.jpg" alt="flunel 60mg">
+            <h2>flunel 60mg</h2>
+            <p>it is used for ocd,nerve,helps to sleep better.</p>
+            <a href="https://www.1mg.com/drugs/flunil-60-capsule-10312?wpsrc=Google+Organic+Search">add to cart</a>
+        </div>
+        <div class="medicine">
+            <img src="https://www.medkart.in/_next/image?url=https%3A%2F%2Fd1s24u4ln0wd0i.cloudfront.net%2F1684842444646ca7cc448be.png&w=256&q=75" alt="Naxdom 500">
+            <h2>Naxdom 500 </h2>
+            <p>used to treat migrane headache.</p>
+            <a href="https://www.medkart.in/order-medicine/minado-500mg-tablet-10s">add to cart</a>
+        </div>
+       <div>
+            <a href="https://www.medibuddy.in/pharmacy/560029/">Explore more medicines</a>
+        </div>
+
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Patients</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-container input {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>All Patients</h1>
+
+<form id="patientForm">
+    <input type="text" name="name" placeholder="Name" required>
+    <span class="error" id="nameError"></span>
+
+    <input type="email" name="email" placeholder="Email" required>
+    <span class="error" id="emailError"></span>
+
+    <input type="text" name="phone" placeholder="Phone" required>
+    <span class="error" id="phoneError"></span>
+
+    <select name="doctor" required>
+        <option value="">Choose a Doctor</option>
+        <option value="Dr. Sudhir Chandra Sinha (Cardiologist)">Dr. Sudhir Chandra Sinha (Cardiologist)</option>
+        <option value="Dr. Ramesh (Pediatrician)">Dr. Ramesh (Pediatrician)</option>
+        <option value="Dr. Deepak Raina (Orthopedic Surgeon)">Dr. Deepak Raina (Orthopedic Surgeon)</option>
+        <option value="Dr. Aishwarya (Dermatologist)">Dr. Aishwarya (Dermatologist)</option>
+        <option value="Dr. Satish Kumar (Neurologist)">Dr. Satish Kumar (Neurologist)</option>
+        <option value="Dr. Silpa (Gynecologist)">Dr. Silpa (Gynecologist)</option>
+        <option value="Dr. Hari Goyal (Oncologist)">Dr. Hari Goyal (Oncologist)</option>
+        <option value="Dr. Deepthi Kondagari (Endocrinologist)">Dr. Deepthi Kondagari (Endocrinologist)</option>
+        <option value="Dr. Abhishek Verma (Pulmonologist)">Dr. Abhishek Verma (Pulmonologist)</option>
+        <option value="Dr. Shibal Bhartiya (Ophthalmologist)">Dr. Shibal Bhartiya (Ophthalmologist)</option>
+        <option value="Dr. Thulasi Ram (Physiotherapist)">Dr. Thulasi Ram (Physiotherapist)</option>
+        <option value="Dr. Hari Goyal (Oncologist)">Dr. Hari Goyal (Oncologist)</option>
+    </select>
+    <span class="error" id="doctorError"></span>
+
+    <input type="date" name="date" required>
+    <span class="error" id="dateError"></span>
+
+    <input type="time" name="time" required>
+    <span class="error" id="timeError"></span>
+
+    <button type="button" onclick="addPatient()">Add Patient</button>
+</form>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search by Patient ID">
+    <button onclick="searchPatient()">Search</button>
+    <button onclick="showAllPatients()">Reset</button>
+</div>
+
+<table id="patientsTable">
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- New patient rows will be added here -->
+    </tbody>
+</table>
+
+<script>
+    let patientId = 1;
+
+    function addPatient() {
+        const form = document.getElementById('patientForm');
+        const name = form.elements['name'].value;
+        const email = form.elements['email'].value;
+        const phone = form.elements['phone'].value;
+        const doctor = form.elements['doctor'].value;
+        const date = form.elements['date'].value;
+        const time = form.elements['time'].value;
+
+        let isValid = true;
+
+        document.getElementById('nameError').textContent = name ? '' : 'This field is required';
+        document.getElementById('emailError').textContent = email ? '' : 'This field is required';
+        document.getElementById('phoneError').textContent = phone ? '' : 'This field is required';
+        document.getElementById('doctorError').textContent = doctor ? '' : 'This field is required';
+        document.getElementById('dateError').textContent = date ? '' : 'This field is required';
+        document.getElementById('timeError').textContent = time ? '' : 'This field is required';
+
+        if (!name || !email || !phone || !doctor || !date || !time) {
+            isValid = false;
+        }
+
+        if (isValid) {
+            const table = document.getElementById('patientsTable').getElementsByTagName('tbody')[0];
+            const row = table.insertRow();
+            row.innerHTML = `
+                <td>${patientId++}</td>
+                <td>${name}</td>
+                <td>${email}</td>
+                <td>${phone}</td>
+                <td>${doctor}</td>
+                <td>${date}</td>
+                <td>${time}</td>
+                <td><button class="delete-btn" onclick="deletePatient(this)">Delete</button></td>
+            `;
+            form.reset();
+        }
+    }
+
+    function deletePatient(button) {
+        const row = button.parentElement.parentElement;
+        row.remove();
+    }
+
+    function searchPatient() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const rows = document.querySelectorAll('#patientsTable tbody tr');
+
+        rows.forEach(row => {
+            const patientId = row.cells[0].textContent;
+            row.style.display = patientId.toLowerCase().includes(searchInput) ? '' : 'none';
+        });
+    }
+
+    function showAllPatients() {
+        document.getElementById('searchInput').value = '';
+        const rows = document.querySelectorAll('#patientsTable tbody tr');
+        rows.forEach(row => row.style.display = '');
+    }
+</script>
+
+</body>
+</html>

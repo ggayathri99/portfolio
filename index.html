@@ -1,83 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gummadi Sri Gayathri | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedCare Health Solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            width: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+            background-color: #f0f4ff;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .hero .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero .buttons a {
+            text-decoration: none;
+            background-color: #0043ff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero .buttons a.secondary {
+            background-color: white;
+            border: 1px solid #0043ff;
+            color: #0043ff;
+        }
+
+        .hero img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0043ff;
+            padding: 30px 10%;
+            color: white;
+        }
+
+        .info-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .info-box img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .info-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Gummadi Sri Gayathri</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p> A motivated 3rd year computer science student specializing in front end development,programming,data structures and algorithms i aim to contribute to innovative projects while enhancing my technical and problem solving skills i am good listerner and learner,work well on my own initiative,and can communicate effectively with people from all walks of life</p>
-  </section>
-
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python,C,Java</li>
-      <li><strong>Front-End:</strong> HTML, CSS, JavaScript</li>
-      <li><strong>Back-End:</strong> SQL</li>
-      <li><strong>Tools:</strong> VS Code, IntelliJ IDEA, MySQL, Eclipse</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <img src="images/medical websit.png" alt="web pages site">
-      <h3>web pages site</h3>
-      <p><strong>Duration:</strong> 2 Month</p>
-      <p>Track patients data,appointments,doctors availibility,medicines,services of the hospital using HTML, CSS, and JavaScript. Data is saved using localStorage.</p>
-      <a href="https://ggayathri99.github.io/medical-website/" target="_blank">🔗 Live Demo</a>
-      <a href="https://ggayathri99.github.io/medical-website/" target="_blank">💻 GitHub</a>
+<header>
+    <div class="logo">
+       <strong>MEDICARE</strong>
     </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
 
-    
-  </section>
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>python,front end web developer-infosys spring board</li>
-      <li>HTML5 and CSS fundamentals - edX</li>
-      <li>data engineering virtual internship-eduskills</li>
-      <li>cloud virtual internship-eduskills</li>
-      <li>introduction to sql-edx</li>
-    </ul>
-  </section>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Making Health Care Better Together</h1>
+        <h1>Your Health is our priority</h1>
+        <p>Also you dry creeping beast multiply fourth abundantly our itself signs bring our. Won form living. Whose dry you seasons divide given gathering great in whose you'll greater let livien form beast sinthete.</p>
+        <div class="buttons">
+            <a href="appointment2.html">Make an Appointment</a>
+        </div>
+    </div>
+    <img src="https://img.freepik.com/premium-photo/healthcare-banner-square-flyer-with-doctor-theme-social-media-post-template_1121250-309736.jpg?size=626&ext=jpg&ga=GA1.1.1199025284.1724602356&semt=ais_hybrid" alt="Doctor Image">
+</section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="resume_720.pdf" download>📄 Download My Resume</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <a href="gayathrigummadi92@gmail.com">📧 gayathrigummadi92@gmail.com</a><br>
-    <a href="tel:8523004995">📞 8523004995</a><br>
-    <a href="https://www.linkedin.com/in/gummadi-sri-gayathri-a746b42a0" target="_blank">🔗 LinkedIn</a>
-  </section>
-
-  <footer>
-    <p>© 2025 Gummadi Sri Gayathri. All Rights Reserved.</p>
-    <p>🔽 <a href="https://github.com/ggayathri99" target="_blank">Visit My GitHub</a></p>
-  </footer>
+<section class="info-section">
+    <div class="info-box">
+        <img src="https://e7.pngegg.com/pngimages/974/990/png-clipart-primary-care-physician-health-care-primary-care-physician-medicine-health-thumbnail.png" alt="Primary Care Icon">
+        <h3>Primary Care</h3>
+        <p>Comprehensive care for all ages with a focus on long-term health and wellbeing.</p>
+    </div>
+    <div class="info-box">
+        <img src="https://media.istockphoto.com/id/922551734/vector/medical-white-cross.jpg?s=612x612&w=0&k=20&c=d65GPwOOyRVlFEPNSu8_Q7KdF1-CQmT4SZpN6nVUIZI=" alt="Emergency Cases Icon">
+        <h3>Emergency Cases</h3>
+        <p>Immediate and urgent care to handle unexpected medical conditions or injuries.</p>
+    </div>
+    <div class="info-box">
+        <img src="https://thumbs.dreamstime.com/b/doctor-appointment-line-icon-linear-style-sign-mobile-concept-web-design-medical-outline-vector-symbol-logo-illustration-301587958.jpg?w=768" alt="Online Appointment Icon">
+        <h3>Online Appointment</h3>
+        <p>Book your appointments online for your convenience and save time.</p>
+    </div>
+</section>
 
 </body>
 </html>
